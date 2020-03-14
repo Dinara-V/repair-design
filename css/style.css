@@ -338,6 +338,47 @@ template {
     background-color: transparent;
     color: #fff; }
 
+.label {
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1.285rem;
+  color: #fff;
+  padding: 0.5rem 0; }
+  .input::-webkit-input-placeholder {
+    color: #fff; }
+  .input::-moz-placeholder {
+    color: #fff; }
+  .input:-ms-input-placeholder {
+    color: #fff; }
+  .input::-ms-input-placeholder {
+    color: #fff; }
+  .input::placeholder {
+    color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -431,13 +472,14 @@ img {
     position: relative;
     margin-left: 4.28rem; }
   .hero__text {
-    line-height: 131%;
+    margin-top: 1rem;
+    line-height: 135%;
     font-size: 1.57rem;
     max-width: 36rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3.3rem; }
   .hero__button {
-    margin-right: 20px;
-    padding: 20px 35px; }
+    margin-right: 16px;
+    padding: 18px 29px; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -498,6 +540,13 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.button--outline {
+  padding: 18px 46px; }
+
+.section-title__heading {
+  font-weight: normal;
+  font-size: 1.43rem; }
+
 .types__section-title {
   margin-bottom: 2.214rem; }
 
@@ -522,7 +571,8 @@ img {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 0.7rem;
+  font-weight: normal; }
 
 .card__list {
   padding: 0 0 0 1rem;
@@ -548,10 +598,58 @@ img {
   line-height: 1.93rem;
   text-align: center;
   max-width: 52.93rem;
-  margin: 1.35rem auto 3.5rem auto; }
+  margin: 1.35rem auto 3.3rem auto; }
 
 .design__pricetag {
   padding: 1.214rem 4rem; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__dialog {
+    position: relative;
+    background: #131313;
+    padding: 2.357rem 3.5rem 1.93rem;
+    color: #fff;
+    max-width: 36.35rem; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.428rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end; }
 
 @media screen and (max-width: 1260px) {
   html {
@@ -596,14 +694,55 @@ img {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: 26.7rem; }
   .hero__text {
+    display: block;
+    margin-top: 0.9rem;
     font-size: 1.5rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 2.8rem;
+    line-height: 135%; }
   .hero__button {
     display: block;
-    min-width: 30rem;
-    margin-bottom: 1.85rem; } }
+    min-width: 28rem;
+    margin-bottom: 2.1rem;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+  .section-title__heading {
+    font-size: 1.85rem; }
+  .types__section-title {
+    margin-bottom: 3.3rem; }
+  .types__card {
+    margin-bottom: 6.4rem; }
+  .button--outline {
+    padding-bottom: 19px;
+    padding-top: 19px; }
+  .card__text {
+    margin-top: -12rem;
+    padding-left: 2.8rem;
+    max-width: 22.7rem;
+    padding-bottom: 1rem; }
+  .card__list {
+    line-height: 1.75; }
+  .card__title {
+    font-size: 1.25rem; }
+  .card__pricetag {
+    bottom: -1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .design__title {
+    font-weight: normal; }
+  .design__text {
+    font-size: 1.25rem;
+    max-width: 306px;
+    line-height: 1.8rem;
+    margin-bottom: 3rem; }
+  .design__card {
+    margin-bottom: 6.6rem; }
+    .design__card__text {
+      margin-top: -12.1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      max-width: 22.6rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
