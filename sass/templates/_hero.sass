@@ -16,6 +16,15 @@
     top: 0
     left: 0
     background-color: rgba($dark, 0.7)
+  &::after
+    content: ''
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 3.46rem
+    background-color: $dark
   &__content
     max-width: 47.85rem
     position: relative
@@ -50,6 +59,7 @@
     color: $light
     font-family: 'Yeseva One', cursive
     font-size: 0.86rem
+    z-index: 3
     &::after
       content: ''
       width: 30px
